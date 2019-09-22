@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="search_period">
+        <item>15 minutos</item>
+        <item>30 minutos</item>
+        <item>2 horas</item>
+        <item>6 horas</item>
+        <item>12 horas</item>
+        <item>1 día</item>
+    </string-array>
+
+    <string-array name="search_period_values">
+        <item>15</item>
+        <item>30</item>
+        <item>120</item>
+        <item>360</item>
+        <item>720</item>
+        <item>1440</item>
+    </string-array>
+
+    <string name="default_search_period_value">15</string>
+
+    <string-array name="clean_period">
+        <item>2 horas</item>
+        <item>6 horas</item>
+        <item>12 horas</item>
+        <item>1 día</item>
+        <item>2 días</item>
+        <item>1 semana</item>
+    </string-array>
+
+    <string-array name="clean_period_values">
+        <item>120</item>
+        <item>360</item>
+        <item>720</item>
+        <item>1440</item>
+        <item>2880</item>
+        <item>10080</item>
+    </string-array>
+
+    <string name="default_clean_period_value">1440</string>
+</resources>

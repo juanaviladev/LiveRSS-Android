@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LiveRSS</string>
+
+    <string name="title_activity_full_screen_reader">FullScreenReaderActivity</string>
+</resources>

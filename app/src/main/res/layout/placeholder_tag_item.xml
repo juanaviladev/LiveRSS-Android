@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:minWidth="100dp"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/headlineTv6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/placeholder_tag_bg" />
+
+</com.facebook.shimmer.ShimmerFrameLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/headlinesMi"
+        android:icon="@drawable/ic_whatshot_black_24dp"
+        android:title="Headlines" />
+
+
+    <item
+        android:id="@+id/favsMi"
+        android:icon="@drawable/ic_favorite_black_24dp"
+        android:title="Favorites" />
+
+    <item
+        android:id="@+id/settingsMi"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:title="Settings" />
+</menu>

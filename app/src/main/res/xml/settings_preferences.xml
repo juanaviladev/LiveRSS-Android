@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:title="Búsqueda">
+
+        <SwitchPreferenceCompat
+            app:icon="@drawable/ic_sync_black_24dp"
+            app:key="auto_search_enabled"
+            app:summaryOff=""
+            app:defaultValue="true"
+            app:title="Búsqueda automática" />
+
+        <DropDownPreference
+            app:key="auto_search_period"
+            app:defaultValue="@string/default_search_period_value"
+            app:title="Periodo de búsqueda"
+            app:dependency="auto_search_enabled"
+            app:entries="@array/search_period"
+            app:summary="Se buscarán nuevas noticias cada X minutos"
+            app:entryValues="@array/search_period_values"
+            />
+
+        <SwitchPreferenceCompat
+            app:icon="@drawable/ic_notifications_black_24dp"
+            app:key="auto_search_notify"
+            app:dependency="auto_search_enabled"
+            app:summaryOff="No recibirás avisos"
+            app:summaryOn="Te avisaremos cuando encontremos nuevas noticias"
+            app:defaultValue="false"
+            app:title="Notificación de nuevas noticias" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="Almacenamiento">
+
+        <Preference
+            app:key="clean_all"
+            app:title="Eliminar noticias guardadas"
+            app:summary="Ahorrarás XMB de espacio en disco"
+            app:icon="@drawable/ic_delete_black_24dp" />
+
+        <SwitchPreferenceCompat
+            app:icon="@drawable/ic_icons8_ccleaner"
+            app:key="auto_clean_enabled"
+            app:summaryOff=""
+            app:defaultValue="true"
+            app:title="Limpieza automática" />
+
+        <DropDownPreference
+            app:key="auto_clean_criteria"
+            app:defaultValue="@string/default_clean_period_value"
+            app:title="Criterio de limpieza"
+            app:dependency="auto_clean_enabled"
+            app:entries="@array/clean_period"
+            app:entryValues="@array/clean_period_values"
+            />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="Fuentes de noticias">
+
+        <SwitchPreferenceCompat
+            app:icon="@drawable/ic_20_minutos"
+            app:key="20_minutos_enabled"
+            app:defaultValue="true"
+            app:title="20Minutos"  />
+
+        <SwitchPreferenceCompat
+            app:icon="@drawable/ic_logo_diario_as"
+            app:key="diario_as_enabled"
+            app:defaultValue="true"
+            app:title="Diario AS"  />
+
+        <SwitchPreferenceCompat
+            app:icon="@drawable/ic_el_diario_black"
+            app:key="el_diario_enabled"
+            app:defaultValue="true"
+            app:title="El Diario"  />
+
+        <SwitchPreferenceCompat
+            app:icon="@drawable/ic_elmundo_black"
+            app:key="el_mundo_enabled"
+            app:defaultValue="true"
+            app:title="El Mundo"  />
+
+        <SwitchPreferenceCompat
+            app:icon="@drawable/ic_elpais"
+            app:key="el_pais_enabled"
+            app:defaultValue="true"
+            app:title="El País"  />
+
+        <SwitchPreferenceCompat
+            app:icon="@drawable/ic_confidencial_black"
+            app:key="el_confidencial_enabled"
+            app:defaultValue="true"
+            app:title="El Confidencial"  />
+
+        <SwitchPreferenceCompat
+            app:icon="@drawable/ic_logo_europapress"
+            app:key="europapress_enabled"
+            app:defaultValue="true"
+            app:title="Europapress"  />
+
+        <SwitchPreferenceCompat
+            app:icon="@drawable/ic_marca"
+            app:key="marca_enabled"
+            app:defaultValue="true"
+            app:title="Diario Marca"  />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        app:title="Acerca de">
+        <Preference
+            app:key="github"
+            app:icon="@drawable/ic_octicons_mark_github"
+            app:title="Ver en github"
+            ></Preference>
+        <Preference
+            app:key="author"
+            app:layout="@layout/preferences_footer"
+            ></Preference>
+    </PreferenceCategory>
+</PreferenceScreen>
