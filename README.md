@@ -76,7 +76,7 @@ Junto con la de datos y framework, conforman la <strong>parte más externa de la
 <p>Respecto a los patrones aplicados en esta capa:</p>
 <ul>
 <li><em>MVVM (Model-View-View-Model)</em><br>
-Este patrón junto con la librería perteneciente a Android Jetpack hace más sencillo el manejo de los cambios de configuración que se producen al rotar la pantalla o cambiar alguna configuración determinada del sistema. Como el MVP, hace posible el testing unitario en gran parte de la capa de aplicación.<br>
+Este patrón junto con la librería perteneciente a Android Jetpack hace más sencillo el manejo de los cambios de configuración que se producen al rotar la pantalla o cambiar alguna configuración determinada del sistema. Como el MVP, hace posible el testing unitario en gran parte de la capa de presentación.<br>
 <br></li>
 </ul>
 </li>
