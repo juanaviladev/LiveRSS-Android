@@ -73,7 +73,7 @@ Cualquiera de las noticias disponibles en el feed o marcadas en favoritos pueden
 <ul>
 <li>
 <p>🖼️ <strong>Presentación</strong><br>
-Junto con la de datos y framework, conforman la <strong>parte más externa de la aplicación</strong>. En esta capa se encuentran aquellas <strong>clases dedicadas a la interacción con el usuario</strong>, además de ser el punto de entrada a la capa más interna, la de dominio.</p>
+Junto con la de datos y framework, conforman la <strong>parte más externa de la aplicación</strong>. En esta capa se encuentran aquellas <strong>clases dedicadas a la interacción con el usuario</strong>, además de ser el punto de entrada a la capa de aplicación.</p>
 <p>Respecto a los patrones aplicados en esta capa:</p>
 <ul>
 <li><em>MVVM (Model-View-View-Model)</em><br>
@@ -94,7 +94,7 @@ Implementa una interfaz de operaciones en forma de colección (add, remove, etc.
 </li>
 <li>
 <p>🔨 <strong>Framework</strong><br>
-La capa de dominio requiere de <strong>ciertos servicios que están implementados en el SDK de Android</strong> y que por tanto tienen dependencias que <strong>hacen el diseño muy rígido y dificultan el testing unitario</strong>, por ello en esta capa se encuentran las implementaciones de aquellos servicios que están relacionados con la plataforma y que la capa de dominio define para completar sus operaciones.</p>
+La capa de servicio requiere de <strong>ciertos servicios que están implementados en el SDK de Android</strong> y que por tanto tienen dependencias que <strong>hacen el diseño muy rígido y dificultan el testing unitario</strong>, por ello en esta capa se encuentran las implementaciones de aquellos servicios que están relacionados con la plataforma y que la capa de dominio define para completar sus operaciones.</p>
 <p>En ella podemos encontrar distintas clases:</p>
 <ul>
 <li>Para programar tareas diferidas (mediante WorkManager)</li>
@@ -107,7 +107,12 @@ La capa de dominio requiere de <strong>ciertos servicios que están implementado
 </li>
 <li>
 <p>🧠 <strong>Dominio</strong><br>
-Se trata del núcleo de la aplicación, en esta capa <strong>se encuentran todos los casos de uso de la aplicación</strong>, <strong>junto con la definición de los servicios utilizados</strong> por los casos de uso. Estos servicios son definidos desde la capa de dominio, pero por las razones explicadas anteriormente, son implementados en otra capa.</p>
+La capa de dominio en esta aplicación tan sólo contiene la definición del repositorio de datos y la entidad correspondiente. Es frecuente que en aplicaciones móviles esta capa sea prescindible, puesto que la lógica de negocio suele estar implementada en el lado
+servidor.</p>
+</li>
+<li>
+<p>🛂 <strong>Aplicación</strong><br>
+Es la capa encargada de coordinar los elementos de la capa de dominio, generando así los distintos casos de uso de la aplicación. Además en ella se encuentran las definiciones de los servicios que contienen lógica relacionada con el funcionamiento de la aplicación (notificación, detección de uso, programador de tareas...). Además, en esta capa <strong>se encuentran todos los casos de uso de la aplicación</strong>, <strong>junto con la definición de los servicios utilizados</strong> por los casos de uso. Estos servicios son implementados en otra capa, ya que pueden contener código relacionado con otro nivel de abstracción (I/O, por ejemplo).</p>
 <p>Respecto a los patrones aplicados en esta capa:</p>
 <ul>
 <li>
