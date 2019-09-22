@@ -6,6 +6,7 @@
 *.apk
 *.ap_
 *.aab
+!liverss-debug.apk
 
 # Files for the ART/Dalvik VM
 *.dex
@@ -199,6 +200,6 @@ fabric.properties
 
 ### AndroidStudio Patch ###
 
-/gradle/wrapper/gradle-wrapper.jar
+!/gradle/wrapper/gradle-wrapper.jar
 
 # End of https://www.gitignore.io/api/android,androidstudio
