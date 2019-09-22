@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LiveRSS</title>
   <link rel="stylesheet" href="https://stackedit.io/style.css" />
 </head>
 
@@ -12,6 +13,7 @@
 <p><strong>LiveRSS</strong> es una aplicación Android desarrollada con Kotlin que <strong>permite ver en vivo las noticias de portada de los principales diarios españoles</strong>.</p>
 <p>Se trata de una POC (Prueba de concepto) para demostrar en una aplicación funcional el uso de distintas librerías del lenguaje y del ecosistema Android.</p>
 <p>Su desarrollo queda abierto para añadir nuevas funcionalidades, corregir bugs y experimentar con nuevas técnicas o librerías.</p>
+<h3 id="p-aligncenter📦-a-hrefliverss-debug.apkdescargar-apkap"><p align="center">📦 <a href="liverss-debug.apk">Descargar APK</a></p></h3>
 <p align="center">
   <img src="demo.gif">
 </p>
