@@ -56,6 +56,7 @@ Cualquiera de las noticias disponibles en el feed o marcadas en favoritos pueden
 </ul>
 <h2 id="❓-backlog">❓ Backlog</h2>
 <ul>
+<li>Migrar a MVVM la pantalla de ajustes</li>
 <li>Soporte multilenguaje (español e inglés)</li>
 <li>Tests unitarios y de integración</li>
 <li>Lectura offline de noticias favoritas</li>
