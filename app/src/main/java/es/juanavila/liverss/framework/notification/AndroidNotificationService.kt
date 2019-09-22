@@ -14,10 +14,10 @@ import javax.inject.Inject
 class AndroidNotificationService @Inject constructor(val appContext: Application) : NotificationService{
 
     override fun notify(msg : SimpleNotification) {
-        val CHANNEL_ID = "my_channel_01"// The providerId of the channel.
+        val channelId = "LiveRSS_channel"
         val notifyID = 1
 
-        val name: CharSequence = "SpiderNews"
+        val name: CharSequence = "LiveRSS"
 
         val notificationIntent = Intent(
             appContext,
@@ -35,21 +35,21 @@ class AndroidNotificationService @Inject constructor(val appContext: Application
 
 
         val notification: Notification? =
-            NotificationCompat.Builder(appContext,CHANNEL_ID)
-                .setSmallIcon(R.drawable.world_simple)
+            NotificationCompat.Builder(appContext,channelId)
+                .setSmallIcon(R.mipmap.ic_launcher)
                 .setContentIntent(contentIntent)
+                .setAutoCancel(true)
                 .setContentTitle(msg.title)
-            //    .setContentText("Hay $newsNb noticias nuevas")
                 .setContentText(msg.message)
-                .setChannelId(CHANNEL_ID).build()
+                .setChannelId(channelId).build()
 
 
         val mNotificationManager = appContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val importance = NotificationManager.IMPORTANCE_HIGH
-            val mChannel = NotificationChannel(CHANNEL_ID, name, importance)
-            mNotificationManager.createNotificationChannel(mChannel);
+            val mChannel = NotificationChannel(channelId, name, importance)
+            mNotificationManager.createNotificationChannel(mChannel)
         }
 
         mNotificationManager.notify(notifyID, notification)
